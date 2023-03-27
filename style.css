@@ -366,6 +366,61 @@ body {
   flex: 1 0 100%;
 }
 
+/* FAQ section */
+
+.faq-accordion input {
+  display: none;
+}
+
+.question-container:not(:last-child) {
+  margin-bottom: var(--size-200);
+}
+
+.faq-box {
+  position: relative;
+  max-width: 100%;
+  cursor: pointer;
+  border: 2px solid var(--clr-accent-500);
+  border-radius: 20px;
+}
+
+.question-label {
+  width: 100%;
+  padding: var(--size-400) 2.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.faq-answear {
+  padding-inline: 2.5rem;
+  padding-bottom: var(--size-400);
+  margin-top: -1rem;
+  display: none;
+}
+
+.box-close {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+
+input:checked + .faq-box {
+  height: auto;
+}
+
+input:checked + .faq-box img {
+  transform: rotate(45deg);
+}
+
+input:checked + .faq-box .faq-answear,
+input:checked + .faq-box .box-close {
+  display: inline-block;
+}
+
 /* utility classes */
 .container {
   max-width: 1440px;
@@ -398,6 +453,10 @@ body {
   margin-left: -45px;
 }
 
+.mt-24 {
+  margin-top: var(--size-300);
+}
+
 .mt-32 {
   margin-top: var(--size-400);
 }
@@ -426,12 +485,37 @@ body {
   margin-top: -14rem;
 }
 
+.w-75 {
+  width: 75%;
+}
+
 .w-80 {
   width: 80%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .desktop-hidden {
   display: none;
+}
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+}
+
+.gap-32 {
+  gap: var(--size-400);
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.justify-space-between {
+  justify-content: space-between;
 }
 
 /* ------------------------------TABLET---------------------------------------- */
@@ -588,6 +672,10 @@ body {
     display: flex;
     align-items: center;
   }
+
+  .w-75 {
+    width: 100%;
+  }
 }
 
 /* ------------------------------MOBILE----------------------------------------- */
@@ -698,6 +786,24 @@ body {
     margin-bottom: 0;
   }
 
+  /* FAQ Section */
+  .question {
+    font-size: var(--fs-600);
+    line-height: 21.6px;
+  }
+
+  .faq-box {
+    border-radius: 15px;
+  }
+
+  .question-label {
+    padding: var(--size-200) var(--size-300);
+  }
+
+  .faq-answear {
+    padding: var(--size-200) var(--size-300);
+  }
+
   /* utility classes */
   .tablet-centered {
     text-align: left;
@@ -712,7 +818,7 @@ body {
   }
 
   .mb-140 {
-    margin-block: var(--size-400);
+    margin-block: var(--size-600);
   }
 
   .dotted-line {
