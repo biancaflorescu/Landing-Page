@@ -766,7 +766,7 @@ li a {
   .slide {
     display: flex;
     align-items: center;
-    touch-action: none;
+    touch-action: pan-y;
   }
 
   .slide-arrow:hover {
@@ -913,7 +913,9 @@ li a {
 @media (max-width: 760px) {
   /* button */
   .main-button {
-    width: 280px;
+    max-width: 280px;
+    display: flex;
+    margin-inline: auto;
   }
 
   /* navigation */
@@ -993,10 +995,11 @@ li a {
   .box {
     max-width: 280px;
     padding: var(--size-300);
+    margin-inline: auto;
   }
 
   .box-right {
-    margin-left: 0;
+    margin-inline: auto;
   }
 
   .dotted-line-left {
