@@ -8,6 +8,9 @@
   --clr-neutral-200: #828282;
   --clr-neutral-100: #ffffff;
 
+  --clr-error: #eb5757;
+  --clr-success: #0eac00;
+
   --ff-primary: "Museo Sans Cyrl", sans-serif;
   --ff-secondary: "Montserrat", sans-serif;
 
@@ -430,7 +433,7 @@ input:checked + .faq-box .box-close {
   gap: var(--size-300);
 }
 
-.form-box input,
+.form-box input:not(input:last-child),
 .form-box textarea {
   border: 1px solid #e0e0e0;
   padding: var(--size-200) var(--size-100);
@@ -457,6 +460,28 @@ input:checked + .faq-box .box-close {
 .form-button {
   padding: 1.25rem var(--size-500);
   margin-top: var(--size-200);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+}
+
+#form .form-field input.error,
+#form .form-field textarea.error {
+  border: 1px solid var(--clr-error);
+}
+
+#form .form-field input.success,
+#form .form-field textarea.success {
+  border: 1px solid var(--clr-success);
+}
+
+.form-field .error-message {
+  color: var(--clr-error);
+  font-size: var(--fs-400);
+  line-height: 16px;
+  margin-top: var(--size-100);
 }
 
 /* utility classes */

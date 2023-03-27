@@ -313,12 +313,22 @@
                         <p class="text-sm mt-8 align-left">Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Republic of the Marshall Islands, MH 96960</p>
                     </div>
                     <div class="form-box">
-                        <form>
-                            <input type="text" name="name" id="form-name" placeholder="Name" />
-                            <input type="email" name="email" id="form-email" placeholder="Email" />
-                            <textarea id="form-message" placeholder="Message"></textarea>
+                        <form id="form">
+                            <div class="form-field">
+                                <input type="text" name="name" id="form-name" placeholder="Name" />
+                                <p class="error-message"></p>
+                            </div>
+                            <div class="form-field">
+                                <input type="text" name="email" id="form-email" placeholder="Email" />
+                                <p class="error-message"></p>
+                            </div>
+                            <div class="form-field">
+                                <textarea id="form-message" placeholder="Message"></textarea>
+                                <p class="error-message"></p>
+                            </div>
 
-                            <button type="submit" class="button form-button centered">SEND</button>
+
+                            <input type="submit" value="SEND" class="button form-button centered" />
                         </form>
                     </div>
                 </div>
