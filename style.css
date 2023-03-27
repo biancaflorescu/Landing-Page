@@ -150,6 +150,14 @@ body {
   text-transform: uppercase;
 }
 
+.button:hover {
+  background-color: #7181fc;
+}
+
+.button:active {
+  background-color: #354bf4;
+}
+
 .nav-button {
   font-size: var(--fs-300);
   padding: 13px 24px;
