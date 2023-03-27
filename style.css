@@ -993,7 +993,6 @@ li a {
   }
 
   .box {
-    max-width: 280px;
     padding: var(--size-300);
     margin-inline: auto;
   }
